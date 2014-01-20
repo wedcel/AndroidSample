@@ -2,10 +2,6 @@ package com.wedcel.androidsample.activity;
 
 import java.io.File;
 
-import com.wedcel.androidsample.R;
-import com.wedcel.androidsample.R.id;
-import com.wedcel.androidsample.R.layout;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,9 +11,13 @@ import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.wedcel.androidsample.R;
 
 public class MailSendActivity extends Activity{
 	private Button 	sendMail,sendMail2,sendHtmlMail,sendHtmlMailFile;
+	private TextView showhtml;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class MailSendActivity extends Activity{
 		sendMail2 = (Button)findViewById(R.id.sendMail2);
 		sendHtmlMail = (Button)findViewById(R.id.sendHtmlMail);
 		sendHtmlMailFile = (Button)findViewById(R.id.sendHtmlMailFile);
+		showhtml = (TextView)findViewById(R.id.showhtml);
 		
 		sendMail.setOnClickListener(new  OnClickListener() {
 			
@@ -83,21 +84,30 @@ public class MailSendActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				String body = "<html>   <body>  <div>" +
+			/*	String body = "<html>   <body>  <div>" +
 						"<font size=\"large\" color=\"red\" face=\"italic\">  Recidiverende after (blister, blegner) er en af de hyppigste mundslimhindesygdomme, " +
 						"<a href=\"http://dtf.fapprikken.dk/images/figur1.jpg\">http://dtf.fapprikken.dk/images/figur1.jpg</a>" +
 						"<a href=\"http://dtf.fapprikken.dk/images/figur1.jpg\">Test a jpg</a>" +
-						"</div> </body></html>";
-				Intent emailIntent = new Intent(Intent.ACTION_SEND,Uri.parse("mailto:"));
-				emailIntent.setType("application/octet-stream");
+						"</div> </body></html>";*/
+				String body = "<font size=\"18\" color=\"red\">测试html的显示</font>"+"" +
+						"<img src=\""+Environment.getExternalStorageDirectory().getAbsolutePath()+File.separator
+						+"2.jpg"+"\">";
+				Intent emailIntent = new Intent(Intent.ACTION_SENDTO,Uri.parse("mailto:"));
+				//emailIntent.setType("application/octet-stream");
 				emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"369924173@qq.com"});
 				emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
 				emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(body));
-				emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(Environment.getExternalStorageDirectory().getAbsoluteFile()+File.separator+"install.txt")));
+			//	emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(Environment.getExternalStorageDirectory().getAbsoluteFile()+File.separator+"install.txt")));
 				startActivity(Intent.createChooser(emailIntent, "请选择邮件发送软件"));
 			}
 		});
 		
+		
+		showhtml.setText(Html.fromHtml("<font size=\"18\" color=\"red\">测试html的显示</font>"+"" +
+				"<img src=\""+Environment.getExternalStorageDirectory().getAbsolutePath()+File.separator
+				+"2.jpg"+"\">"));
+		System.out.println(Environment.getExternalStorageDirectory().getAbsolutePath()+File.separator
+				+"2.jpg");
 	  }
 	
 	
@@ -133,5 +143,21 @@ public class MailSendActivity extends Activity{
 <sup>
 <tt>
 <u>
+ * 
+ * 1. Re: How do I make the email client display HTML email?
+ 
+Newbie Bronze
+hammondnav 2012-4-27 上午11:26 （回复 chriswei）
+Mine seems to load HTML emails without any issues. I just sent a test email to my Exchange address and it came through just fine.
+ 
+The option to load HTML emails as HTML is enabled by default, but maybe you can try toggling it off and back on. To get to the option:
+Open the Mail app.
+Tap Menu (top right corner).
+Tap Settings.
+Tap Sync, Send & Receive.
+Under Message format, you can disable and enable HTML.
+ 
+Hope this helps!
+ * 
  * 
  */

@@ -40,35 +40,6 @@ public class MimeTypeActivity extends Activity{
 }
 /*
  * 
-
-�������ͣ�Content-Type�������ͷ����������ָ����Ϣ�����͡�һ�����������ʽ���֡�[type]/[subtype]
-
-type���������ʽ��
-Text�����ڱ�׼���ر�ʾ���ı���Ϣ���ı���Ϣ�����Ƕ����ַ�ͻ��߶��ָ�ʽ�ģ�
-Multipart������������Ϣ��Ķ�����ֹ���һ����Ϣ����Щ���ֿ����ǲ�ͬ���͵���ݣ�
-Application�����ڴ���Ӧ�ó�����ݻ��߶�������ݣ�
-Message�����ڰ�װһ��E-mail��Ϣ��
-Image�����ڴ��侲̬ͼƬ��ݣ�
-Audio�����ڴ�����Ƶ����������ݣ�
-Video�����ڴ��䶯̬Ӱ����ݣ�����������Ƶ�༭��һ�����Ƶ��ݸ�ʽ��
-
-
-subtype����ָ��type����ϸ��ʽ��
-text/plain�����ı���
-text/html��HTML�ĵ���
-application/xhtml+xml��XHTML�ĵ���
-image/gif��GIFͼ��
-image/jpeg��JPEGͼ�񣩡�PHP��Ϊ��image/pjpeg��
-image/png��PNGͼ�񣩡�PHP��Ϊ��image/x-png��
-video/mpeg��MPEG������
-application/octet-stream������Ķ�������ݣ�
-application/pdf��PDF�ĵ���
-application/msword��Microsoft Word�ļ���
-message/rfc822��RFC 822��ʽ��
-multipart/alternative��HTML�ʼ���HTML��ʽ�ʹ��ı���ʽ����ͬ����ʹ�ò�ͬ��ʽ��ʾ��
-application/x-www-form-urlencoded��ʹ��HTTP��POST�����ύ�ı?��
-multipart/form-data��ͬ�ϣ�����Ҫ���ڱ?�ύʱ�����ļ��ϴ��ĳ��ϣ�
- * 
 3gp video/3gpp
 aab application/x-authoware-bin
 aam application/x-authoware-map
