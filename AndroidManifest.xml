@@ -9,12 +9,13 @@
         android:targetSdkVersion="18" />
 
     <application
+        android:name="com.wedcel.androidsample.UILApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.wedcel.androidsample.MainActivity"
+            android:name="com.wedcel.androidsample.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +24,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MimeTypeActivity"
+            android:name="com.wedcel.androidsample.activity.MimeTypeActivityeActivity"
             android:label="MimeType测试" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wedcel.androidsample.activity.MailSendActivity"
+            android:label="发送邮件测试" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wedcel.androidsample.activity.ImageLoaderActivity"
+            android:label="ImageLoader加载图片" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wedcel.androidsample.activity.PackageSignActivity"
+            android:label="签名文件hashcode(代码创建View)" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,8 @@
-package com.wedcel.androidsample;
+package com.wedcel.androidsample.activity;
+
+import com.wedcel.androidsample.R;
+import com.wedcel.androidsample.R.id;
+import com.wedcel.androidsample.R.layout;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,7 +22,7 @@ public class MimeTypeActivity extends Activity{
 		extension2 = (TextView)findViewById(R.id.extension2);
 		
 		
-		//ºÜSBµÄmimetype ÀàËÆ½ØÈ¡ ×Ö·û´®
+		//SBçš„mimetyoe èƒ½è¯†åˆ«æˆ.com
 		MimeTypeMap mime = MimeTypeMap.getSingleton();
 		String type =  MimeTypeMap.getFileExtensionFromUrl("http://www.wedcel.com/test.jpg");
 		String testtype =  MimeTypeMap.getFileExtensionFromUrl("http://www.wedcel.com");
@@ -37,33 +41,33 @@ public class MimeTypeActivity extends Activity{
 /*
  * 
 
-ÄÚÈİÀàĞÍ£¨Content-Type£©£¬Õâ¸öÍ·²¿ÁìÓòÓÃÓÚÖ¸¶¨ÏûÏ¢µÄÀàĞÍ¡£Ò»°ãÒÔÏÂÃæµÄĞÎÊ½³öÏÖ¡£[type]/[subtype]
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½Content-Typeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½Í¡ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ö¡ï¿½[type]/[subtype]
 
-typeÓĞÏÂÃæµÄĞÎÊ½¡£
-Text£ºÓÃÓÚ±ê×¼»¯µØ±íÊ¾µÄÎÄ±¾ĞÅÏ¢£¬ÎÄ±¾ÏûÏ¢¿ÉÒÔÊÇ¶àÖÖ×Ö·û¼¯ºÍ»òÕß¶àÖÖ¸ñÊ½µÄ£»
-Multipart£ºÓÃÓÚÁ¬½ÓÏûÏ¢ÌåµÄ¶à¸ö²¿·Ö¹¹³ÉÒ»¸öÏûÏ¢£¬ÕâĞ©²¿·Ö¿ÉÒÔÊÇ²»Í¬ÀàĞÍµÄÊı¾İ£»
-Application£ºÓÃÓÚ´«ÊäÓ¦ÓÃ³ÌĞòÊı¾İ»òÕß¶ş½øÖÆÊı¾İ£»
-Message£ºÓÃÓÚ°ü×°Ò»¸öE-mailÏûÏ¢£»
-Image£ºÓÃÓÚ´«Êä¾²Ì¬Í¼Æ¬Êı¾İ£»
-Audio£ºÓÃÓÚ´«ÊäÒôÆµ»òÕßÒôÉùÊı¾İ£»
-Video£ºÓÃÓÚ´«Êä¶¯Ì¬Ó°ÏñÊı¾İ£¬¿ÉÒÔÊÇÓëÒôÆµ±à¼­ÔÚÒ»ÆğµÄÊÓÆµÊı¾İ¸ñÊ½¡£
+typeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
+Textï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½×¼ï¿½ï¿½ï¿½Ø±ï¿½Ê¾ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Í»ï¿½ï¿½ß¶ï¿½ï¿½Ö¸ï¿½Ê½ï¿½Ä£ï¿½
+Multipartï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Ğ©ï¿½ï¿½ï¿½Ö¿ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Í¬ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½İ£ï¿½
+Applicationï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½İ»ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½
+Messageï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½×°Ò»ï¿½ï¿½E-mailï¿½ï¿½Ï¢ï¿½ï¿½
+Imageï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ä¾²Ì¬Í¼Æ¬ï¿½ï¿½İ£ï¿½
+Audioï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½
+Videoï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ä¶¯Ì¬Ó°ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½à¼­ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½İ¸ï¿½Ê½ï¿½ï¿½
 
 
-subtypeÓÃÓÚÖ¸¶¨typeµÄÏêÏ¸ĞÎÊ½¡£
-text/plain£¨´¿ÎÄ±¾£©
-text/html£¨HTMLÎÄµµ£©
-application/xhtml+xml£¨XHTMLÎÄµµ£©
-image/gif£¨GIFÍ¼Ïñ£©
-image/jpeg£¨JPEGÍ¼Ïñ£©¡¾PHPÖĞÎª£ºimage/pjpeg¡¿
-image/png£¨PNGÍ¼Ïñ£©¡¾PHPÖĞÎª£ºimage/x-png¡¿
-video/mpeg£¨MPEG¶¯»­£©
-application/octet-stream£¨ÈÎÒâµÄ¶ş½øÖÆÊı¾İ£©
-application/pdf£¨PDFÎÄµµ£©
-application/msword£¨Microsoft WordÎÄ¼ş£©
-message/rfc822£¨RFC 822ĞÎÊ½£©
-multipart/alternative£¨HTMLÓÊ¼şµÄHTMLĞÎÊ½ºÍ´¿ÎÄ±¾ĞÎÊ½£¬ÏàÍ¬ÄÚÈİÊ¹ÓÃ²»Í¬ĞÎÊ½±íÊ¾£©
-application/x-www-form-urlencoded£¨Ê¹ÓÃHTTPµÄPOST·½·¨Ìá½»µÄ±íµ¥£©
-multipart/form-data£¨Í¬ÉÏ£¬µ«Ö÷ÒªÓÃÓÚ±íµ¥Ìá½»Ê±°éËæÎÄ¼şÉÏ´«µÄ³¡ºÏ£©
+subtypeï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½typeï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ê½ï¿½ï¿½
+text/plainï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+text/htmlï¿½ï¿½HTMLï¿½Äµï¿½ï¿½ï¿½
+application/xhtml+xmlï¿½ï¿½XHTMLï¿½Äµï¿½ï¿½ï¿½
+image/gifï¿½ï¿½GIFÍ¼ï¿½ï¿½
+image/jpegï¿½ï¿½JPEGÍ¼ï¿½ñ£©¡ï¿½PHPï¿½ï¿½Îªï¿½ï¿½image/pjpegï¿½ï¿½
+image/pngï¿½ï¿½PNGÍ¼ï¿½ñ£©¡ï¿½PHPï¿½ï¿½Îªï¿½ï¿½image/x-pngï¿½ï¿½
+video/mpegï¿½ï¿½MPEGï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+application/octet-streamï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½
+application/pdfï¿½ï¿½PDFï¿½Äµï¿½ï¿½ï¿½
+application/mswordï¿½ï¿½Microsoft Wordï¿½Ä¼ï¿½ï¿½ï¿½
+message/rfc822ï¿½ï¿½RFC 822ï¿½ï¿½Ê½ï¿½ï¿½
+multipart/alternativeï¿½ï¿½HTMLï¿½Ê¼ï¿½ï¿½ï¿½HTMLï¿½ï¿½Ê½ï¿½Í´ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã²ï¿½Í¬ï¿½ï¿½Ê½ï¿½ï¿½Ê¾ï¿½ï¿½
+application/x-www-form-urlencodedï¿½ï¿½Ê¹ï¿½ï¿½HTTPï¿½ï¿½POSTï¿½ï¿½ï¿½ï¿½ï¿½á½»ï¿½Ä±?ï¿½ï¿½
+multipart/form-dataï¿½ï¿½Í¬ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ú±?ï¿½á½»Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ï´ï¿½ï¿½Ä³ï¿½ï¿½Ï£ï¿½
  * 
 3gp video/3gpp
 aab application/x-authoware-bin

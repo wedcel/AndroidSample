@@ -1,4 +1,4 @@
-package com.wedcel.androidsample;
+package com.wedcel.androidsample.activity;
 
 import java.text.Collator;
 import java.util.ArrayList;
