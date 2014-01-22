@@ -59,6 +59,24 @@
                 <category android:name="com.wedcel.androiddemos.EXAMPLE" />
             </intent-filter>
         </activity>
+         <activity
+            android:name="com.wedcel.androidsample.activity.BottomMenuActivity"
+            android:label="从底部弹出POP菜单" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.wedcel.androidsample.activity.AlertMenuActivity"
+            android:label="从底部弹出alert菜单" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
