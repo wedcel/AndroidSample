@@ -54,32 +54,42 @@ public final class R {
         public static final int transcant=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0011;
-        public static final int btn_cancel=0x7f0a000f;
-        public static final int btn_pick_photo=0x7f0a000e;
-        public static final int btn_take_photo=0x7f0a000d;
-        public static final int button=0x7f0a0007;
-        public static final int extension=0x7f0a000a;
-        public static final int extension2=0x7f0a000b;
-        public static final int image=0x7f0a0001;
-        public static final int imageMimeType=0x7f0a0008;
-        public static final int path=0x7f0a0000;
-        public static final int pop_layout=0x7f0a000c;
-        public static final int popup_text=0x7f0a0010;
-        public static final int sendHtmlMail=0x7f0a0004;
-        public static final int sendHtmlMailFile=0x7f0a0005;
-        public static final int sendMail=0x7f0a0002;
-        public static final int sendMail2=0x7f0a0003;
-        public static final int showhtml=0x7f0a0006;
-        public static final int testMimeType=0x7f0a0009;
+        public static final int action_settings=0x7f0a0019;
+        public static final int animview=0x7f0a0006;
+        public static final int appads=0x7f0a0001;
+        public static final int btn_cancel=0x7f0a0017;
+        public static final int btn_pick_photo=0x7f0a0016;
+        public static final int btn_take_photo=0x7f0a0015;
+        public static final int button=0x7f0a000f;
+        public static final int dynaads=0x7f0a0002;
+        public static final int extension=0x7f0a0012;
+        public static final int extension2=0x7f0a0013;
+        public static final int image=0x7f0a0008;
+        public static final int imageMimeType=0x7f0a0010;
+        public static final int objanim=0x7f0a0003;
+        public static final int path=0x7f0a0007;
+        public static final int pop_layout=0x7f0a0014;
+        public static final int popup_text=0x7f0a0018;
+        public static final int sendHtmlMail=0x7f0a000b;
+        public static final int sendHtmlMailFile=0x7f0a000c;
+        public static final int sendMail=0x7f0a0009;
+        public static final int sendMail2=0x7f0a000a;
+        public static final int sendMultipleFile=0x7f0a000d;
+        public static final int showhtml=0x7f0a000e;
+        public static final int staticads=0x7f0a0000;
+        public static final int testMimeType=0x7f0a0011;
+        public static final int text=0x7f0a0005;
+        public static final int valueanim=0x7f0a0004;
     }
     public static final class layout {
-        public static final int activity_imageload=0x7f030000;
-        public static final int activity_mailsend=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_mimetype=0x7f030003;
-        public static final int alert_dialog=0x7f030004;
-        public static final int alert_dialog_menu_layout=0x7f030005;
+        public static final int activity_adbailing=0x7f030000;
+        public static final int activity_animation=0x7f030001;
+        public static final int activity_imageload=0x7f030002;
+        public static final int activity_mailsend=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int activity_mimetype=0x7f030005;
+        public static final int alert_dialog=0x7f030006;
+        public static final int alert_dialog_menu_layout=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f090000;

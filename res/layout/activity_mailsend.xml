@@ -28,7 +28,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
           android:text="发送带附件邮件"
+     
         />
+     
+     <Button
+        android:id="@+id/sendMultipleFile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+          android:text="发送多附件邮件"
+        />
+     
   <TextView
         android:id="@+id/showhtml"
         android:layout_width="fill_parent"

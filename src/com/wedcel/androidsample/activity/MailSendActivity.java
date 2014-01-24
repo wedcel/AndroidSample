@@ -1,6 +1,7 @@
 package com.wedcel.androidsample.activity;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 import com.wedcel.androidsample.R;
 
 public class MailSendActivity extends Activity{
-	private Button 	sendMail,sendMail2,sendHtmlMail,sendHtmlMailFile;
+	private Button 	sendMail,sendMail2,sendHtmlMail,sendHtmlMailFile,sendMultipleFile;
 	private TextView showhtml;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MailSendActivity extends Activity{
 		sendMail2 = (Button)findViewById(R.id.sendMail2);
 		sendHtmlMail = (Button)findViewById(R.id.sendHtmlMail);
 		sendHtmlMailFile = (Button)findViewById(R.id.sendHtmlMailFile);
+		sendMultipleFile = (Button)findViewById(R.id.sendMultipleFile);
+		
 		showhtml = (TextView)findViewById(R.id.showhtml);
 		
 		sendMail.setOnClickListener(new  OnClickListener() {
@@ -98,6 +101,27 @@ public class MailSendActivity extends Activity{
 				emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
 				emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(body));
 			//	emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(Environment.getExternalStorageDirectory().getAbsoluteFile()+File.separator+"install.txt")));
+				startActivity(Intent.createChooser(emailIntent, "请选择邮件发送软件"));
+			}
+		});
+		
+		
+		sendMultipleFile.setOnClickListener(new  OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE,Uri.parse("mailto:"));
+				emailIntent.setType("application/octet-stream");
+				emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"369924173@qq.com"});
+				emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+				emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml("test multiple file"));
+			
+				ArrayList<Uri> imageUris = new ArrayList<Uri>();  
+				imageUris.add(Uri.parse("file://"+(Environment.getExternalStorageDirectory().getAbsoluteFile()+File.separator+"sendpic.jpg")));  
+				imageUris.add(Uri.parse("file://"+(Environment.getExternalStorageDirectory().getAbsoluteFile()+File.separator+"send.pdf")));        
+				emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, imageUris); 
+				
 				startActivity(Intent.createChooser(emailIntent, "请选择邮件发送软件"));
 			}
 		});
