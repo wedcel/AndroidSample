@@ -1,13 +1,11 @@
 package com.wedcel.androidsample.activity;
 
-import com.wedcel.androidsample.R;
-import com.wedcel.androidsample.R.id;
-import com.wedcel.androidsample.R.layout;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.MimeTypeMap;
 import android.widget.TextView;
+
+import com.wedcel.androidsample.R;
 
 public class MimeTypeActivity extends Activity{
 	private TextView imageMimeType,extension,extension2,testMimeType;
