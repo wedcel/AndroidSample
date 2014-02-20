@@ -91,8 +91,7 @@
                 <category android:name="com.wedcel.androiddemos.EXAMPLE" />
             </intent-filter>
         </activity>
-        
-            <activity
+        <activity
             android:name="com.wedcel.androidsample.activity.PositionActivity"
             android:label="按钮位置信息" >
             <intent-filter>
@@ -101,6 +100,45 @@
                 <category android:name="com.wedcel.androiddemos.EXAMPLE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.wedcel.androidsample.activity.AnimationActivity"
+            android:label="动画" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wedcel.androidsample.activity.AnimationViewActivity"
+            android:label="自定义view动画" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity>
+        
+       <activity
+            android:name="com.wedcel.androidsample.activity.InterceptActivity"
+            android:label="事件传递机制" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity> 
+       
+          <activity
+            android:name="com.wedcel.androidsample.activity.SliderRelaActivity"
+            android:label="类似滑动解锁的view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity> 
+       
     </application>
 
 </manifest>

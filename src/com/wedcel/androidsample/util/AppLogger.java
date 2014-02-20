@@ -11,7 +11,7 @@ import com.wedcel.androidsample.BuildConfig;
  * Wrapper API for sending log output.
  */
 public class AppLogger {
-    protected static final String TAG = "OralMedicin";
+    protected static final String TAG = "AndroidSample";
 
     private AppLogger() {
     }

@@ -74,10 +74,12 @@ public class AnimationActivity extends Activity{
 				   
 				   ObjectAnimator animUp = ObjectAnimator.ofFloat(animview, "y",
 						   height -aninViewHeight*3, animview.getTop()).setDuration(500);
+				   
 				   animUp.setInterpolator(new DecelerateInterpolator());
 				   
 				   AnimatorSet s1 = new AnimatorSet();
-	               s1.playSequentially(animDown, animUp);
+				   s1.play(animUp);
+//	          /     s1.playSequentially(animDown, animUp);
 	               
 	               s1.setTarget(animview);
 	               s1.start();
