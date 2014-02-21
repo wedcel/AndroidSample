@@ -139,6 +139,18 @@
             </intent-filter>
         </activity> 
        
+          
+          
+          <activity
+            android:name="com.wedcel.androidsample.activity.CustomLayoutActivity"
+            android:label="自定义布局位置" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.wedcel.androiddemos.EXAMPLE" />
+            </intent-filter>
+        </activity> 
+          
     </application>
 
 </manifest>

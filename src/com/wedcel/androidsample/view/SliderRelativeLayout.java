@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -204,6 +205,8 @@ public class SliderRelativeLayout extends RelativeLayout {
 			//handler.obtainMessage(1).sendToTarget();
 			locationX = getScreenWidth() - (int)(rightRingView.getWidth()*1.5);
 			invalidate();
+			
+			handler.obtainMessage(1).sendToTarget();
 			return true;
 		}
 		return false;
